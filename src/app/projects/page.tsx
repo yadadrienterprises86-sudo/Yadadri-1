@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, ArrowRight } from "lucide-react";
-import { projectsData } from "@/data/projects";
+import { getProjects, ProjectDetail } from "@/utils/db";
 
 const categories = [
   { id: "all", name: "All Projects" },
@@ -18,10 +18,15 @@ const categories = [
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [projects, setProjects] = useState<ProjectDetail[]>([]);
+
+  useEffect(() => {
+    setProjects(getProjects());
+  }, []);
 
   const filteredProjects = activeFilter === "all"
-    ? projectsData
-    : projectsData.filter((p) => p.category === activeFilter);
+    ? projects
+    : projects.filter((p) => p.category === activeFilter);
 
   return (
     <div className="bg-slate-950 min-h-screen text-slate-100 py-16">

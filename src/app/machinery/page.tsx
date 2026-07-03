@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, Settings, ShieldCheck, Cpu } from "lucide-react";
-import { machineryData } from "@/data/machinery";
+import { getMachinery, MachineDetail } from "@/utils/db";
 
 const categories = [
   { id: "all", name: "All Fleet" },
@@ -17,10 +17,15 @@ const categories = [
 
 export default function MachineryPage() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [machinery, setMachinery] = useState<MachineDetail[]>([]);
+
+  useEffect(() => {
+    setMachinery(getMachinery());
+  }, []);
 
   const filteredMachinery = activeFilter === "all"
-    ? machineryData
-    : machineryData.filter((m) => m.category === activeFilter);
+    ? machinery
+    : machinery.filter((m) => m.category === activeFilter);
 
   return (
     <div className="bg-slate-950 min-h-screen text-slate-100 py-16">

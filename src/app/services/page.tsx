@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -12,7 +13,7 @@ import {
   CheckCircle,
   HelpCircle
 } from "lucide-react";
-import { servicesData } from "@/data/services";
+import { getServices, ServiceDetail } from "@/utils/db";
 
 // Icon mapping helper
 const getServiceIcon = (name: string) => {
@@ -34,6 +35,12 @@ const getServiceIcon = (name: string) => {
 };
 
 export default function ServicesPage() {
+  const [services, setServices] = useState<ServiceDetail[]>([]);
+
+  useEffect(() => {
+    setServices(getServices());
+  }, []);
+
   return (
     <div className="bg-slate-950 min-h-screen text-slate-100 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +74,7 @@ export default function ServicesPage() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-          {servicesData.map((service, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={service.slug}
               initial={{ opacity: 0, y: 25 }}

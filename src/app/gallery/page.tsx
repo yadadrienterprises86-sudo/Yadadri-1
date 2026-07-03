@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ZoomIn, Map } from "lucide-react";
-import { galleryData } from "@/data/gallery";
+import { getGallery, GalleryItem } from "@/utils/db";
 import Lightbox from "@/components/Lightbox";
 
 const categories = [
@@ -19,10 +19,15 @@ const categories = [
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [gallery, setGallery] = useState<GalleryItem[]>([]);
+
+  useEffect(() => {
+    setGallery(getGallery());
+  }, []);
 
   const filteredMedia = activeFilter === "all"
-    ? galleryData
-    : galleryData.filter((item) => item.category === activeFilter);
+    ? gallery
+    : gallery.filter((item) => item.category === activeFilter);
 
   const handleOpenLightbox = (index: number) => {
     // Find absolute index of item in current filteredMedia

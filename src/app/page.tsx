@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -19,8 +20,7 @@ import {
   Star,
   Quote
 } from "lucide-react";
-import { servicesData } from "@/data/services";
-import { machineryData } from "@/data/machinery";
+import { getServices, getMachinery, ServiceDetail, MachineDetail } from "@/utils/db";
 import StatsCounter from "@/components/StatsCounter";
 
 // Icon mapping helper
@@ -42,10 +42,13 @@ const getServiceIcon = (name: string) => {
 };
 
 export default function HomePage() {
-  // Highlight first 3 services on home page
-  const featuredServices = servicesData.slice(0, 3);
-  // Highlight first 3 machines on home page
-  const featuredMachinery = machineryData.slice(0, 3);
+  const [featuredServices, setFeaturedServices] = useState<ServiceDetail[]>([]);
+  const [featuredMachinery, setFeaturedMachinery] = useState<MachineDetail[]>([]);
+
+  useEffect(() => {
+    setFeaturedServices(getServices().slice(0, 3));
+    setFeaturedMachinery(getMachinery().slice(0, 3));
+  }, []);
 
   return (
     <div className="flex flex-col w-full">
