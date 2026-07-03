@@ -86,11 +86,11 @@ function ContactPageContent() {
               <div>
                 <h3 className="font-bold text-white mb-2">Registered Address</h3>
                 <p className="text-slate-350 text-sm leading-relaxed">
-                  Plot No 48, Road No 3,
+                  Mariyala, Bommalaramaram,
                   <br />
-                  Sri Sai Nagar Colony, Chintal,
+                  Yadadri Bhongir,
                   <br />
-                  Hyderabad, Telangana - 500054
+                  Telangana - 508116
                 </p>
               </div>
             </div>
@@ -113,8 +113,8 @@ function ContactPageContent() {
               <div>
                 <h3 className="font-bold text-white mb-2">Email Correspondence</h3>
                 <p className="text-slate-350 text-sm">
-                  <a href="mailto:info@sriyadadrient.com" className="hover:text-amber-400 transition-colors font-bold text-slate-300">
-                    info@sriyadadrient.com
+                  <a href="mailto:yadadrienterprises86@gmail.com" className="hover:text-amber-400 transition-colors font-bold text-slate-300">
+                    yadadrienterprises86@gmail.com
                   </a>
                   <span className="text-slate-500 font-semibold block text-xs">General / RFQ responses</span>
                 </p>
@@ -257,32 +257,7 @@ function ContactPageContent() {
           </div>
         </div>
 
-        {/* Map Section */}
-        <section className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-6 md:p-8">
-          <h2 className="text-xl font-bold text-white mb-6 uppercase tracking-wider border-l-2 border-amber-400 pl-3">
-            Our Location Map
-          </h2>
-          {/* Interactive CSS Mockup for Map */}
-          <div className="relative w-full h-[400px] bg-slate-950 rounded-2xl overflow-hidden border border-slate-850 flex items-center justify-center text-center p-8 select-none">
-            <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80')" }} />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/50" />
-            <div className="relative z-10 max-w-md space-y-4">
-              <MapPin className="h-10 w-10 text-amber-400 mx-auto animate-bounce" />
-              <h3 className="text-lg font-bold text-white">Sri Yadadri Enterprises Headquarters</h3>
-              <p className="text-slate-400 text-xs leading-relaxed">
-                Chintal Colony, Hyderabad, Telangana 500054
-              </p>
-              <a
-                href="https://maps.google.com/?q=Chintal+Hyderabad+Telangana"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold px-6 py-2.5 rounded-lg text-xs transition-all inline-flex items-center space-x-2"
-              >
-                <span>Open in Google Maps</span>
-              </a>
-            </div>
-          </div>
-        </section>
+
 
       </div>
     </div>

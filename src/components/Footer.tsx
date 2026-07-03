@@ -164,13 +164,11 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-amber-400 shrink-0 mt-0.5" />
                 <span>
-                  Plot No 48, Road No 3,
+                  Mariyala, Bommalaramaram,
                   <br />
-                  Sri Sai Nagar Colony,
+                  Yadadri Bhongir,
                   <br />
-                  Chintal, Hyderabad,
-                  <br />
-                  Telangana - 500054
+                  Telangana - 508116
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -181,8 +179,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-amber-400 shrink-0" />
-                <a href="mailto:info@sriyadadrient.com" className="hover:text-amber-400 transition-colors">
-                  info@sriyadadrient.com
+                <a href="mailto:yadadrienterprises86@gmail.com" className="hover:text-amber-400 transition-colors">
+                  yadadrienterprises86@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">

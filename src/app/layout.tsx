@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sri Yadadri Enterprises | Construction, Granite Mining, Drilling & Blasting",
     description: "Premier infrastructure development, granite mining, blast-hole drilling, controlled blasting, and loading operations.",
-    url: "https://www.sriyadadrient.com",
+    url: "https://www.yadadrienterprises.com",
     siteName: "Sri Yadadri Enterprises",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ["https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&h=630&q=80"],
   },
   alternates: {
-    canonical: "https://www.sriyadadrient.com",
+    canonical: "https://www.yadadrienterprises.com",
   },
   robots: {
     index: true,
@@ -74,16 +74,16 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     "name": "Sri Yadadri Enterprises",
     "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
-    "@id": "https://www.sriyadadrient.com/#organization",
-    "url": "https://www.sriyadadrient.com",
+    "@id": "https://www.yadadrienterprises.com/#organization",
+    "url": "https://www.yadadrienterprises.com",
     "telephone": "+918374276995",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Plot No 48, Road No 3, Sri Sai Nagar Colony, Chintal",
-      "addressLocality": "Hyderabad",
+      "streetAddress": "Mariyala, Bommalaramaram",
+      "addressLocality": "Yadadri Bhongir",
       "addressRegion": "Telangana",
-      "postalCode": "500054",
+      "postalCode": "508116",
       "addressCountry": "IN"
     },
     "geo": {

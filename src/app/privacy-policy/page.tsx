@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
         <div className="space-y-6 text-sm text-slate-300 leading-relaxed font-medium">
           <p>
-            Welcome to Sri Yadadri Enterprises (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;). We respect your privacy and are committed to protecting any personally identifiable information you may provide through our website <span className="text-amber-400 font-bold">www.sriyadadrient.com</span> (the &ldquo;Site&rdquo;).
+            Welcome to Sri Yadadri Enterprises (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;). We respect your privacy and are committed to protecting any personally identifiable information you may provide through our website <span className="text-amber-400 font-bold">www.yadadrienterprises.com</span> (the &ldquo;Site&rdquo;).
           </p>
 
           <h2 className="text-lg font-bold text-white pt-4">1. Information We Collect</h2>
@@ -53,8 +53,8 @@ export default function PrivacyPolicy() {
           <p>
             If you have any questions or concerns regarding our privacy policies, please contact our office desk at:
             <br />
-            <span className="text-amber-400 block mt-2 font-bold">Email: info@sriyadadrient.com</span>
-            <span className="text-amber-400 block font-bold">Address: Plot No 48, Road No 3, Sri Sai Nagar Colony, Chintal, Hyderabad, Telangana - 500054</span>
+            <span className="text-amber-400 block mt-2 font-bold">Email: yadadrienterprises86@gmail.com</span>
+            <span className="text-amber-400 block font-bold">Address: Mariyala, Bommalaramaram, Yadadri Bhongir, Telangana - 508116</span>
           </p>
         </div>
 

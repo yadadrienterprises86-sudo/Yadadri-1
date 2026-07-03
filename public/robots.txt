@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sriyadadrient.com/sitemap.xml
+Sitemap: https://www.yadadrienterprises.com/sitemap.xml
