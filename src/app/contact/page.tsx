@@ -45,18 +45,31 @@ function ContactPageContent() {
     e.preventDefault();
     setFormStatus("submitting");
 
-    // Simulate API submission
-    setTimeout(() => {
-      setFormStatus("success");
-      // Clear fields
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+
+      if (response.ok) {
+        setFormStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setFormStatus("error");
+    }
   };
 
   return (
